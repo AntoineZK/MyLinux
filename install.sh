@@ -32,7 +32,7 @@ $Distrib install valgrind -y
 $Distrib install libcsfml-dev libsfml-dev -y
 $Distrib install git -y
 $Distrib install zsh -y
-$Distrib install curl -y
+$Distrib install curl wget -y
 $Distrib install gcc -y
 $Distrib install emacs -y
 $Distrib install libncurses5-dev libncursesw5-dev -y
