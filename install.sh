@@ -38,13 +38,13 @@ then
 fi
 $Distrib upgrade -y
 $Distrib install apt-utils -y
-$Distrib install make -y
+$Distrib install make cmake -y
 $Distrib install valgrind -y
 $Distrib install libcsfml-dev libsfml-dev -y
 $Distrib install git -y
 $Distrib install zsh -y
 $Distrib install curl wget -y
-$Distrib install gcc -y
+$Distrib install gcc g++ -y
 $Distrib install emacs -y
 $Distrib install htop -y
 $Distrib install python3 -y
