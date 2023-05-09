@@ -49,7 +49,13 @@ $Distrib install emacs -y
 $Distrib install htop -y
 $Distrib install python3 -y
 $Distrib install libncurses5-dev libncursesw5-dev -y
+$Distrib install net-tools -y
+$Distrib install python3-pip -y
+$Distrib install nano -y
+$Distrib install nasm -y
+$Distrib install neofetch -y
 $Distrib autoremove -y
+
 echo "alias emacs="emacs -nw"" >> ~/.zshrc
 printf "${Green}Installation complete${NC}\n"
 
