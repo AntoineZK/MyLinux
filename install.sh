@@ -5,13 +5,8 @@ Green='\033[0;32m'
 Blue='\033[0;34m'
 Distrib='Unknown'
 
-Help="./install.sh [apt or dnf] [omz] [--help or -h] [-omz]"
+Help="./install.sh [apt or dnf] [--help or -h]"
 
-if [ "$1" = "-omz" ]
-then
-    printf "${Blue}Will install oh-my-zsh on your computer${NC}\n"
-    exit 0
-fi
 if [ "$1" = "--help" ] | [ "$1" = "-h" ]
 then
     printf "${Blue}${Help}${NC}\n"
@@ -54,14 +49,20 @@ $Distrib install python3-pip -y
 $Distrib install nano -y
 $Distrib install nasm -y
 $Distrib install neofetch -y
+$Distrib install tcsh -y
+$Distrib install tree -y
 $Distrib autoremove -y
 
 echo "alias emacs="emacs -nw"" >> ~/.zshrc
 printf "${Green}Installation complete${NC}\n"
 
-if [ "$2" = "omz" ]
+printf "${Green}Start installation of oh-my-zsh${NC}\n"
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+if [ $? -eq 100 ]
 then
-    printf "${Green}Start installation of oh-my-zsh${NC}\n"
-    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-    printf "${Green}Installation complete${NC}\n"
+    sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 fi
+printf "${Green}Installation complete${NC}\n"
+
+#curl / wget global
+# install coding style
