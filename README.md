@@ -1,4 +1,4 @@
-# Epitech_linux
+# MyLinux
 A bash code that download every essential package for an Epitech student
 
 To download the file : 
