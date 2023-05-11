@@ -1,5 +1,5 @@
 # MyLinux
-A bash code that download every essential package for an Epitech student
+A bash code that download every essential package for me and epitech student in general.
 
 To download the file : 
 ```sh
