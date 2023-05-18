@@ -55,13 +55,13 @@ if [ -d ~/.oh-my-zsh ]
 then
     printf "${Blue}oh-my-zsh already installed${NC}\n"
     exit 0
-elif [ $2 = "--omzGet" ]
+elif [ "$2" = "--omzGet" ]
 then
     printf "${Green}Start installation of oh-my-zsh${NC}\n"
     sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
     printf "${Green}Installation complete${NC}\n"
     exit 0
-elif [ $2 = "--omzCurl" ]
+elif [ "$2" = "--omzCurl" ]
 then
     printf "${Green}Start installation of oh-my-zsh${NC}\n"
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
