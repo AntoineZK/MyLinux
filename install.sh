@@ -68,4 +68,3 @@ then
     printf "${Green}Installation complete${NC}\n"
     exit 0
 fi
-# install coding style
